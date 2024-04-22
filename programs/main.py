@@ -11,7 +11,7 @@ import sys
 from sklearn.metrics import classification_report
 
 from utils import input_pipeline, AvgrageMeter, accuracy, data_info
-from models import MALANet
+from models import CALANet
 
 epoches = 500
 batch_size = 128
@@ -100,7 +100,7 @@ cudnn.benchmark = True
 torch.cuda.manual_seed(seed)
 
 criterion = nn.CrossEntropyLoss().cuda()
-model = MALANet(input_nc, class_num, segment_size, L).cuda()
+model = CALANet(input_nc, class_num, segment_size, L).cuda()
 model.apply(weight_init)
 
 
