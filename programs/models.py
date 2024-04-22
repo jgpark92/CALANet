@@ -39,7 +39,7 @@ def pool_per_T(T,L):
     return pool_idx
 
 
-class MALABlock(nn.Module):
+class CALABlock(nn.Module):
     def __init__(self, i_nc, o_nc, L, T, pool):
         super(MALABlock, self).__init__()
         self.L = L
@@ -49,7 +49,7 @@ class MALABlock(nn.Module):
         self.gconv = nn.Conv1d(i_nc, o_nc, kernel_size=5, padding='same', bias=False, groups=L)
         self.bn = nn.BatchNorm1d(o_nc)
 
-        # TGConv
+        # same implementation to LCTMs
         self.tgconv = nn.Conv1d(o_nc, o_nc//L, kernel_size=T)
         
     def forward(self, x):
@@ -62,7 +62,7 @@ class MALABlock(nn.Module):
         g_feat = F.relu_(self.tgconv(l_feat))
         return l_feat, g_feat
 
-class MALANet(nn.Module):
+class CALANet(nn.Module):
     def __init__(self, nc_input, n_classes, segment_size, L):
 
         super(MALANet, self).__init__()
@@ -96,7 +96,7 @@ class MALANet(nn.Module):
                     nc_o *= 2
             else:
                 pool = False
-            self.layers.append(MALABlock(nc_i, nc_o, self.L, T, pool))
+            self.layers.append(CALABlock(nc_i, nc_o, self.L, T, pool))
             nc_i = nc_o
             out_channel_num.append(nc_o//L)
         
