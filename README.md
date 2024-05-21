@@ -4,7 +4,7 @@
 
 This program (CALANet) is designed to perform the real-time sensor-based activity recognition. The CALANet includes all-layer aggregation structure that allows the classifier to aggregate features for all layer while maintaining the efficiency of conventional CNNs.
 
-This software is a PyTorch implementation of the proposed method. The original version of this program was written by Jaegyun Park. 
+This software is a PyTorch implementation of the proposed method. 
 <!-- You can find detailed information in our manuscript. -->
 
 ### [Paper]
