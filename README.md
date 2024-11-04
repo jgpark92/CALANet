@@ -7,9 +7,16 @@ This program (CALANet) is designed to perform the real-time sensor-based activit
 This software is a PyTorch implementation of the proposed method. 
 <!-- You can find detailed information in our manuscript. -->
 
-### [Paper]
+### Citation
+The paper will be available soon.
 ```
-TBD
+@inproceedings{park2024calanet,
+    author = {Park, Jaegyun and Kim, Dae-Won and Lee, Jaesung},
+    booktitle = {Advances in Neural Information Processing Systems},
+    title = "{CALANet: Cheap All-Layer Aggregation for Human Activity Recognition}",
+    volume = {37},
+    year = {2024}
+}
 ```
 
 ## License
