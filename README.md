@@ -26,7 +26,7 @@ This program is available for download for non-commercial use, licensed under th
 ## Files
 
 The repository contains following files.
-* `main.py`, Python script file, containing the implementation for training and test phases of the HT-FuseNet,
-* `model.py`, Python script file, containing the PyTorch implementation of the HT-FuseNet,
+* `main.py`, Python script file, containing the implementation for training and test phases of the CALANet,
+* `model.py`, Python script file, containing the PyTorch implementation of the CALANet,
 * `utils.py`, Python script file, containing a collection of small Python functions,
 * `README.md`.
