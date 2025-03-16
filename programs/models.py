@@ -41,7 +41,7 @@ def pool_per_T(T,L):
 
 class CALABlock(nn.Module):
     def __init__(self, i_nc, o_nc, L, T, pool):
-        super(MALABlock, self).__init__()
+        super(CALABlock, self).__init__()
         self.L = L
         self.pool = pool
 
@@ -65,7 +65,7 @@ class CALABlock(nn.Module):
 class CALANet(nn.Module):
     def __init__(self, nc_input, n_classes, segment_size, L):
 
-        super(MALANet, self).__init__()
+        super(CALANet, self).__init__()
         T = segment_size
         nc_o = 64
         if nc_input > 64:
